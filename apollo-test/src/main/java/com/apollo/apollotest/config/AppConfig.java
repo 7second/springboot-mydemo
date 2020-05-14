@@ -15,4 +15,9 @@ public class AppConfig {
     public TestJavaConfigBean javaConfigBean() {
         return new TestJavaConfigBean();
     }
+
+    @Bean
+    public T getObject(){
+        return new T();
+    }
 }

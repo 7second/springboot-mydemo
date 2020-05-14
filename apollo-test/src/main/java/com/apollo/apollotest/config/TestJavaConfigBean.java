@@ -11,6 +11,15 @@ public class TestJavaConfigBean {
     private int timeout;
     private int batch;
 
+    @Value("${app.id}")
+    private String hhh;
+
+    @Value("${server.port}")
+    private String serverport;
+
+    @Value("${driverClass}")
+    private String driverClass;
+
     @Value("${batch:200}")
     public void setBatch(int batch) {
         this.batch = batch;
@@ -23,10 +32,20 @@ public class TestJavaConfigBean {
     public int getBatch() {
         return batch;
     }
-    /*SettableFuture<ConfigChangeEvent> futureData = SettableFuture.create();
 
-    @ApolloConfigChangeListener("othernamespace")
-    private void onChange(ConfigChangeEvent changeEvent) {
-        futureData.set(changeEvent);
-    }*/
+    public void setTimeout(int timeout) {
+        this.timeout = timeout;
+    }
+
+    public String getDriverClass() {
+        return driverClass;
+    }
+
+    public String getServerport() {
+        return serverport;
+    }
+
+    public String getHhh() {
+        return hhh;
+    }
 }

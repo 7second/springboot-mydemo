@@ -1,5 +1,6 @@
 package com.apollo.apollotest.controller;
 
+import com.apollo.apollotest.config.T;
 import com.apollo.apollotest.config.TestJavaConfigBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,11 +16,18 @@ public class TestController {
     @Autowired
     private TestJavaConfigBean testJavaConfigBean;
 
+    @Autowired
+    private T t;
+
     @RequestMapping("get")
     public String get(){
+        System.out.println(t==null);
         int batch = testJavaConfigBean.getBatch();
         int timeout = testJavaConfigBean.getTimeout();
-        return "batch:"+batch+", timeout:"+timeout;
+        String hhh = testJavaConfigBean.getHhh();
+        String serverport = testJavaConfigBean.getServerport();
+        String driverClass = testJavaConfigBean.getDriverClass();
+        return "batch:"+batch+", timeout:"+timeout+", driverClass:"+driverClass+", serverport:"+serverport+", appid:"+hhh;
     }
 
 }
