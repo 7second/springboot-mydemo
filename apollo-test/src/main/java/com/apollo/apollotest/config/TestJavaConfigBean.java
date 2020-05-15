@@ -20,6 +20,13 @@ public class TestJavaConfigBean {
     @Value("${driverClass}")
     private String driverClass;
 
+    @Value("${yyyzzzz}")
+    private String yyyzzzz;
+
+    public String getYyyzzzz() {
+        return yyyzzzz;
+    }
+
     @Value("${batch:200}")
     public void setBatch(int batch) {
         this.batch = batch;

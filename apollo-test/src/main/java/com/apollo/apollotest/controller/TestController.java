@@ -27,7 +27,9 @@ public class TestController {
         String hhh = testJavaConfigBean.getHhh();
         String serverport = testJavaConfigBean.getServerport();
         String driverClass = testJavaConfigBean.getDriverClass();
-        return "batch:"+batch+", timeout:"+timeout+", driverClass:"+driverClass+", serverport:"+serverport+", appid:"+hhh;
+        return "batch:"+batch+", timeout:"+timeout+", driverClass:"+driverClass
+                +", serverport:"+serverport+", appid:"+hhh
+                +", yyyzzzz:"+testJavaConfigBean.getYyyzzzz();
     }
 
 }
