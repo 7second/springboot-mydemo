@@ -9,5 +9,4 @@ public class SpringbootMytatisApplication {
     public static void main(String[] args) {
         SpringApplication.run(SpringbootMytatisApplication.class, args);
     }
-
 }
